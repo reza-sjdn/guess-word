@@ -74,6 +74,8 @@ int main () {
                 cout << "ERR: Invalid Input\n\n";
                 cout << "==> ";
                 cin >> ch;
+                // always convert to uppercase
+                if (islower(ch)) ch = toupper(ch);
             }
 
             else if (wgc.find_first_of(ch) != string::npos ||
@@ -81,6 +83,8 @@ int main () {
                 cout << "ERR: Previously Used Character\n\n";
                 cout << "==> ";
                 cin >> ch;
+                // always convert to uppercase
+                if (islower(ch)) ch = toupper(ch);
             }
 
             else break;
